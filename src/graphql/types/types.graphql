@@ -1,0 +1,83 @@
+type Post {
+  id: Int
+  title: String
+  body: String
+  user: User
+  comments: [Comment]
+}
+
+type Comment {
+  postId: Int
+  id: Int
+  name: String
+  email: String
+  body: String
+}
+
+type Album {
+  id: Int
+  title: String
+  user: User
+}
+
+type Photo {
+  id: Int
+  title: String
+  url: String
+  thumbnailUrl: String
+  album: Album
+}
+
+type Todo {
+  id: Int
+  title: String
+  completed: Boolean
+  user: User
+}
+
+type User {
+  id: Int
+  name: String
+  username: String
+  email: String
+  address: Address
+  phone: String
+  website: String
+  company: Company
+}
+
+type Address {
+  street: String
+  suite: String
+  city: String
+  zipcode: String
+  geo: Geo
+}
+
+type Geo {
+  lat: String
+  lng: String
+}
+
+type Company {
+  name: String
+  catchPhrase: String
+  bs: String
+}
+
+type Query {
+  users: [User]
+  user(id: Int!): User
+
+  posts: [Post]
+  post(id: Int!): Post
+
+  albums: [Album]
+  album(id: Int!): Album
+
+  photos: [Photo]
+  photo(id: Int!): Photo
+
+  todos: [Todo]
+  todo(id: Int!): Todo
+}

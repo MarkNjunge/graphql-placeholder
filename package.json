@@ -1,0 +1,17 @@
+{
+  "name": "graphql-placeholder",
+  "version": "1.0.0",
+  "description": "GraphQL implementation of JSONPlaceholder",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "server": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "graphql-yoga": "^1.14.12",
+    "merge-graphql-schemas": "^1.5.2"
+  }
+}
