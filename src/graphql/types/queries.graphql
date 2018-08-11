@@ -1,0 +1,16 @@
+type Query {
+  users: [User]
+  user(id: Int!): User!
+
+  posts: [Post]
+  post(id: Int!): Post!
+
+  albums: [Album]
+  album(id: Int!): Album!
+
+  photos: [Photo]
+  photo(id: Int!): Photo!
+
+  todos: [Todo]
+  todo(id: Int!): Todo!
+}

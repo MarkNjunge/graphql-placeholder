@@ -1,9 +1,15 @@
 type Post {
-  id: Int
+  id: Int!
   title: String
   body: String
   user: User
   comments: [Comment]
+}
+
+input AddPostInput {
+  title: String!
+  body: String!
+  userId: Int!
 }
 
 type Comment {
@@ -63,21 +69,4 @@ type Company {
   name: String
   catchPhrase: String
   bs: String
-}
-
-type Query {
-  users: [User]
-  user(id: Int!): User
-
-  posts: [Post]
-  post(id: Int!): Post
-
-  albums: [Album]
-  album(id: Int!): Album
-
-  photos: [Photo]
-  photo(id: Int!): Photo
-
-  todos: [Todo]
-  todo(id: Int!): Todo
 }

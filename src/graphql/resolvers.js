@@ -47,6 +47,13 @@ const resolvers = {
       );
     }
   },
+  Mutation: {
+    addPost: async (parent, { post }) => {
+      return await axios.default
+        .post("https://jsonplaceholder.typicode.com/posts", post)
+        .then(response => response.data);
+    }
+  },
   Post: {
     user: async post => {
       return await sendRequest(
